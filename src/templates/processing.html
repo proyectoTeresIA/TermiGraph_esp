@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>TermiGraph</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script>
+        async function checkStatus() {
+            let response = await fetch("/status");
+            let data = await response.json();
+            if (data.error) {
+                window.location.href = "/finished";  // redirige a error.html
+            } else if (data.finished) {
+                window.location.href = "/finished";  // redirige a finished.html
+            } else {
+                setTimeout(checkStatus, 2000);
+            }
+        }
+        window.onload = checkStatus;
+    </script>
+</head>
+<body>
+  <main>
+  <!-- cabecera -->
+  <header class="main-header">
+    <div class="header-wrapper">
+      <div class="logo-left">
+        <a href="https://proyectoteresia.org/">
+          <img src="{{ url_for('static', filename='img/logo_teresia.png') }}" alt="Logo TeresIA">
+        </a>
+      </div>
+      <div class="logo-center">
+        <a href="{{ url_for('home') }}">
+          <img src="{{ url_for('static', filename='img/logo_termigraph.png') }}" alt="Logo Servicio">
+        </a>
+      </div>
+    </div>
+  </header>
+  
+    <!-- Barra del menú, mavegación de la página -->
+    <nav class="main-nav">
+        <ul>
+        <li><a href="{{ url_for('home') }}">Conversor</a></li>
+        <li><a href="{{ url_for('documentacion') }}">Sobre TermiGraph</a></li>
+        <li><a href="https://proyectoteresia.org/">Sobre TeresIA</a></li>
+        </ul>
+    </nav>
+
+    <!-- Conversor, mensaje de espera -->
+    <section id="processing" class="main-sec">
+        <h2>Conversor</h2>
+        <div class="descripcion">
+          <p>El proceso está en ejecución...</p>
+          <p>Esto puede tardar unos minutos. Por favor, espere ⏳</p>
+        </div>
+    </section>
+  </main>
+</body>
+<!-- Footer Section -->
+<footer class="site-footer">
+    <div class="footer-wrapper">
+    <!-- Contenedor Izquierdo -->
+    <div class="footer-container left">
+      <div class="footer-logos">
+        <a href="https://proyectoteresia.org/">
+          <img src="{{ url_for('static', filename='img/logo_teresia_fondo.svg') }}" alt="Logo_TeresIA" class="footer-logo">
+        </a>
+        <a href="https://oeg.fi.upm.es">
+          <img src="{{ url_for('static', filename='img/logo_oeg.svg') }}" alt="Logo_OEG" class="footer-logo">
+        </a>
+      </div> 
+    </div>
+    <!-- Derechos -->
+    <p class="footer-rights">
+        © 2025 TeresIA. Todos los derechos reservados
+    </p>
+    <!-- Contenedor Derecho -->
+    <div class="footer-container right">
+      <div class="footer-socials">
+        <a href="https://github.com/proyectoTeresIA/TermiGraph_esp" aria-label="GitHub">
+          <img src="{{ url_for('static', filename='img/logo_github.svg') }}" alt="GitHub_TermiGraph">
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>TermiGraph</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+<main>
+  <header class="main-header">
+    <div class="header-wrapper">
+      <div class="logo-left">
+        <a href="https://proyectoteresia.org/">
+          <img src="{{ url_for('static', filename='img/logo_teresia.png') }}" alt="Logo TeresIA">
+        </a>
+      </div>
+      <div class="logo-center">
+        <a href="{{ url_for('home') }}">
+          <img src="{{ url_for('static', filename='img/logo_termigraph.png') }}" alt="Logo Servicio">
+        </a>
+      </div>
+    </div>
+  </header>
+  
+    <!-- Barra del menú, mavegación de la página -->
+    <nav class="main-nav">
+        <ul>
+        <li><a href="{{ url_for('home') }}">Conversor</a></li>
+        <li><a href="{{ url_for('documentacion') }}">Sobre TermiGraph</a></li>
+        <li><a href="https://proyectoteresia.org/">Sobre TeresIA</a></li>
+        </ul>
+    </nav>
+
+    <section id="finished" class="main-sec">
+        <h2>Conversor</h2>
+            {% if error %}
+                <h1>❌ Ha ocurrido un error</h1>
+                <p>No se ha podido generar el archivo. Inténtelo de nuevo.</p>
+                <a href="{{ url_for('home') }}"><button>Volver al inicio</button></a>
+            {% else %}
+                <section id="success" class="sub-blanco">
+                    <h1> Proceso finalizado con éxito </h1>
+                    <p>Su archivo RDF está listo para descargar. Por favor, pulse en "descargar archivo".</p>
+                    <a href="{{ url_for('download') }}" class="download-btn" download>Descargar archivo</a>
+                </section>
+                <section id="success" class="sub-gris">
+                    <h1> ¿Le gustaría incluir el recurso en el buscador de TeresIA? </h1>
+                    <p>Si desea enviar al portal de TeresIA su terminología, por favor, descargue el archivo generado. 
+                      A continuación, pulsando en "ver tutorial", se le remitirá a un tutorial que le explicará cómo acerlo.
+                    </p>
+                    <p>Nota: sólo se aceptarán aquellos recursos que contengan español o algún otro idioma de España.</p>
+                    <p><b>DISPONIBLE PRÓXIMAMENTE</b></p>
+                    <!-- <a class="download-btn">Ver tutorial</a> -->
+                </section>
+                <section id="success" class="sub-blanco">
+                    <h1> ¿Tiene más recursos que quiera convertir? </h1>
+                    <a href="{{ url_for('home') }}" class="download-btn">Convertir otro</a>
+                </section>
+            {% endif %}
+    </section>
+</main>
+</body>
+<!-- Footer Section -->
+<footer class="site-footer">
+    <div class="footer-wrapper">
+    <!-- Contenedor Izquierdo -->
+    <div class="footer-container left">
+      <div class="footer-logos">
+        <a href="https://proyectoteresia.org/">
+          <img src="{{ url_for('static', filename='img/logo_teresia_fondo.svg') }}" alt="Logo_TeresIA" class="footer-logo">
+        </a>
+        <a href="https://oeg.fi.upm.es">
+          <img src="{{ url_for('static', filename='img/logo_oeg.svg') }}" alt="Logo_OEG" class="footer-logo">
+        </a>
+      </div> 
+    </div>
+    <!-- Derechos -->
+    <p class="footer-rights">
+        © 2025 TeresIA. Todos los derechos reservados
+    </p>
+    <!-- Contenedor Derecho -->
+    <div class="footer-container right">
+      <div class="footer-socials">
+        <a href="https://github.com/proyectoTeresIA/TermiGraph_esp" aria-label="GitHub">
+          <img src="{{ url_for('static', filename='img/logo_github.svg') }}" alt="GitHub_TermiGraph">
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+</html>

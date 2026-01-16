@@ -1,0 +1,41 @@
+{
+	"termtypes":
+	{
+		"abbrev": "abbreviation",
+		"formula": "formula",
+		"phrase": "phraseologicalUnit",
+		"short form": "shortForm",
+		"term": "termEntry"
+	},
+	"part_of_speech": {
+		"noun": "noun",
+		"nominal phrase": "",
+		"verb": "verb"
+	},
+	"gender": {
+		"neuter": "neuter",
+		"masculine": "masculine",
+		"feminine": "feminine"
+	},
+	"number": {
+		"singular": "singular"
+	},
+	"evaluation": {
+		"preferred": {
+			"instance": "preferredTerm",
+			"class": "normAuth"
+		},
+		"admitted": {
+			"instance": "admittedTerm",
+			"class": "normAuth"
+		},
+		"deprecated": {
+			"instance": "deprecatedTerm",
+			"class": "normAuth"
+		},
+		"obsolete": {
+			"instance": "obsoleteForm",
+			"class": "tempQualifier"
+		}
+	}
+}

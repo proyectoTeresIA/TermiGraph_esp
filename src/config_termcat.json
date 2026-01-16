@@ -1,0 +1,56 @@
+{
+    "termTypes": {
+        "nc": "internationalScientificName",
+        "sbl": "symbol",
+        "for": "formula",
+        "den. com.": "productName",
+        "sigla": "shortForm",
+        "abrev.": "abbreviation",
+        "loc": "setPhrase",
+        "loc llat": "setPhrase"
+    },
+    "identifiers": {
+        "cod": "code", 
+        "COD": "code", 
+        "CAS": "casNumber"
+    },
+    "grammar_values" : {
+        "": {"pos":"", "additionalInfo":{}}, 
+        "adj": {"pos": "adjective", "additionalInfo":{}},
+        "adv": {"pos": "adverb", "additionalInfo":{}},
+        "interj": {"pos": "interjection", "additionalInfo":{}},
+        "m": {"pos":"", "additionalInfo":{"gender":"masculine"}},
+        "f": {"pos":"", "additionalInfo":{"gender":"feminine"}},
+        "n": {"pos":"noun", "additionalInfo":{}}, 
+        "n pl": {"pos":"noun", "additionalInfo":{"number": "plural"}}, 
+        "n m": {"pos":"noun", "additionalInfo":{"gender":"masculine"}},
+        "n f": {"pos":"noun", "additionalInfo":{"gender":"feminine"}},
+        "n n": {"pos":"noun", "additionalInfo":{"gender":"neuter"}},
+        "n m pl": {"pos":"noun", "additionalInfo":{"gender":"masculine", "number":"plural"}},
+        "n f pl": {"pos":"noun", "additionalInfo":{"gender":"feminine", "number":"plural"}},
+        "n n pl": {"pos":"noun", "additionalInfo":{"gender":"neuter", "number":"plural"}},
+        "prep": {"pos": "preposition", "additionalInfo":{}},
+        "pfx": {"pos":"", "additionalInfo":{}},
+        "sfx": {"pos":"", "additionalInfo":{}},
+        "v": {"pos":"verb", "additionalInfo":{}},
+        "v tr": {"pos":"verb", "additionalInfo":{"valency": "Transitive"}},
+        "v intr": {"pos":"verb", "additionalInfo":{"valency": "Intransitive"}},
+        "v prep": {"pos":"verb", "additionalInfo":{"synFrame": "PrepositionFrame"}},
+        "v pron": {"pos":"verb", "additionalInfo":{"synFrame": "ReflexiveFrame"}},
+        "v prep pron": {"pos":"verb", "additionalInfo":{"synFrame": ["PrepositionFrame","ReflexiveFrame"]}},
+        "v tr pron": {"pos":"verb", "additionalInfo":{"valency": "Transitive", "synFrame": "ReflexiveFrame"}},
+        "v intr pron": {"pos":"verb", "additionalInfo":{"valency": "Intransitive", "synFrame": "ReflexiveFrame"}},
+        "v tr/prep": {"pos":"verb", "additionalInfo":{"valency ": "Transitive", "synFrame": "PrepositionFrame"}},
+        "loc": {"pos":"", "additionalInfo":{}},
+        "loc llat": {"pos":"", "additionalInfo":{}}
+    },
+    "double_forms": {
+        "m, f": ["m", "f"],
+        "n m, f": ["n m", "n f"],
+        "n m/f": ["n m", "n f"], 
+        "n m pl/f pl": ["n m pl", "n f pl"]
+    },
+    "signed_languages": {
+        "SC": "http://www.lexvo.org/page/iso639-3/csc"
+    }
+}
