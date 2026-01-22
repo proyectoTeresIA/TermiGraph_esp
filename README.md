@@ -52,3 +52,12 @@ Para convertir los recursos simplemente debe rellenar el formulario, el cual con
 
 
 </div>
+
+## Financiadores
+
+<p align="center">
+  <img src="img/financiacion_gob_es_MTDFP.jpg" alt="logo_gob_esp_MTDFP" style="width:auto; height:80px;" >
+  <img src="img/financiacion_PRTR.jpg" alt="logo_PRTR" style="width:auto; height:80px;" >
+  <img src="img/financiacion_es_EU.jpg" alt="logo_Union_Europea" style="width:auto; height:80px;">
+</p>
+
