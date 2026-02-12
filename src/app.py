@@ -3,12 +3,16 @@ from flask_session import Session
 from pathlib import Path
 from converter import convert_from_file
 from string_cleaner import string_cleaner
-from config_converter import PREPROCESSORS
+from config_converter import PREPROCESSORS, EMAIL_CONFIG
 from eurovoc_fields import EUROVOC
 import time, threading, json
 from datetime import datetime
 from session_key import create_secretKey
 import shutil
+import smtplib
+import requests
+from email.mime.text import MIMEText
+
 
 
 def erase_data():
@@ -222,21 +226,21 @@ def status():
     else:
         return jsonify({"running": True})
 
-@app.route("/finished")
+@app.route("/finished", methods=['GET', 'POST'])
 def finished():
     file_path = session.get('filePath')
     if not file_path:
         return render_template("error.html", mensaje="No se pudo generar el archivo.")
-
     submission_id = session.get('submission_id')
     session_path = Path('./flask_session_data') / f"{submission_id}_status.json"
-
     if session_path.exists():
         status_data = json.loads(session_path.read_text(encoding='utf-8'))
         if status_data.get("error"):
             return render_template("error.html", mensaje="No se pudo generar el archivo.")
         # if successfully transformed, erase all intermediate data
         erase_intermidiate_files(status_data["result_file"])
+        if request.method == "POST":
+                accion = request.form.get("accion")
         return render_template("finished.html")
     else:
         return render_template("error.html", mensaje="Lo sentimos, algo ha fallado")
@@ -267,7 +271,6 @@ def documentacion():
 @app.route('/documentacion/<path:filename>')
 def download_file(filename):
     return send_from_directory('documentation', filename)
-
 
 @app.errorhandler(404) 
 def page_not_found(e):

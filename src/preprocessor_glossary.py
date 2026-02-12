@@ -45,7 +45,6 @@ class GlossaryCleaner:
             formNode.set('formID', f"{termID}_form")
             textNode = ET.SubElement(formNode, 'form')
             textNode.text = term
-        self.create_langSchema(cleanRoot, langReg)
         return cleanRoot, langReg
 
     def create_langSchema(self, cleanRoot, langReg:dict):

@@ -11,35 +11,35 @@ PREPROCESSORS = {
         "format": '.txt',
         "converter": GlossaryCleaner(),
         "page2_template": 'pag2_glosario.html',
-        "mandatory_fields": ['author', 'title', 'resource_lang'],
+        "mandatory_fields": ['author', 'title', 'resource_lang', 'domain'],
         "optional_fields": ['resource_link']
         },
     'termcat_xml': {
         "format": '.xml',
         "converter": TermcatCleaner(),
         "page2_template": 'pag2_no_glosario.html',
-        "mandatory_fields": ['author', 'title'],
+        "mandatory_fields": ['author', 'title', 'domain'],
         "optional_fields": ['resource_link']
         },
     'tbx_basic': {
         "format": '.tbx',
         "converter": TBXCleaner(),
         "page2_template": 'pag2_no_glosario.html',
-        "mandatory_fields": ['author', 'title'],
-        "optional_fields": [ 'resource_link']
+        "mandatory_fields": ['author', 'title', 'domain'],
+        "optional_fields": ['resource_link']
         },
     'iate_json': {
         "format": '.json',
         "converter": IATECleaner(),
         "page2_template": 'pag2_no_glosario.html',
-        "mandatory_fields": ['author', 'title'],
+        "mandatory_fields": ['author', 'title', 'domain'],
         "optional_fields": ['resource_link']
         },
     'unterm_csv': {
         "format": '.xlsx',
         "converter": UNTermCleaner(),
         "page2_template": 'pag2_no_glosario.html',
-        "mandatory_fields": ['author', 'title'],
+        "mandatory_fields": ['author', 'title', 'domain'],
         "optional_fields": ['resource_link']
     }
 }

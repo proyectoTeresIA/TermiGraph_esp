@@ -74,11 +74,14 @@ def add_prov(clean_root, provDict:dict):
             # separar los datos(str a list)
             data_list = provDict[field].split(";")
             for element in data_list:
-                element = element.strip()
-                subnode = ET.SubElement(node, field)
+                subnode = ET.SubElement(node, f'resource_{field}')
                 subnode.text = element.strip()
-                fieldID = string_cleaner(element)
-                subnode.set(f"{field}ID", fieldID)
+                if 'eurovoc:' in element:
+                    fieldID = string_cleaner(element.replace('eurovoc:', ''))
+                    subnode.set(f"eurovocID", fieldID)
+                else:
+                    fieldID = string_cleaner(element)
+                    subnode.set(f"{field}ID", fieldID)
         elif field == 'resource_link':
             node = ET.SubElement(clean_root, field)
             node.text = provDict[field]
