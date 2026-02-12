@@ -34,7 +34,7 @@
   <!-- Parte del conversor, el formulario -->
   <section id="conversor" class="main-sec">
     <h2>Conversor</h2>
-    <form method="post" enctype="multipart/form-data" autocomplete="off">
+    <form method="post" enctype="multipart/form-data" autocomplete="off" class="formulario">
       <h3 class="header-con-lineas">Paso 1: CARGA DEL RECURSO</h3>
       <label>Tipo de archivo:</label>
       <span class="obligatorio-simbolo" title="Obligatorio">✱</span>
@@ -67,6 +67,18 @@
         <span class="obligatorio-simbolo" title="Obligatorio">✱</span><span class="obligatorio-leyenda">Obligatorio</span>
       </div>
     </form>
+  </section>
+  <!-- Financiación -->
+  <hr class="separador">
+  <h4>financiado por:</h4>
+  <section class="financiacion">
+    <div>
+      <a>
+        <img src="{{ url_for('static', filename='img/financiacion_gob_es_MTDFP.jpg') }}" height="100" alt="Logo financiador: Gob. España">
+        <img src="{{ url_for('static', filename='img/financiacion_PRTR.jpg') }}" height="100" alt="Logo financiador: PRTR">
+        <img src="{{ url_for('static', filename='img/financiacion_es_EU.jpg') }}" height="100" alt="Logo financiador: Unión Europea">
+      </a>
+    </div>
   </section>
 </main>
 </body>

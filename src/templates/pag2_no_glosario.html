@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
+<main>
   <header class="main-header">
     <div class="header-wrapper">
       <div class="logo-left">
@@ -33,7 +34,7 @@
   <!-- Conversor, metadatos para no-glosarios -->
   <section id="conversor" class="main-sec">
     <h2>Conversor</h2>
-    <form method="post" enctype="multipart/form-data" autocomplete="off">
+    <form method="post" enctype="multipart/form-data" autocomplete="off" class="formulario">
       <h3>Paso 2: METADATOS DEL RECURSO</h3>
       <!-- título -->
       <label for="title">Título del recurso</label>
@@ -42,10 +43,10 @@
         <input class="input-text" type="text" id="title" name="title" required>
       </div>    
       <!-- dominios -->
-      <label for="resource_domain">Dominio (EuroVoc)</label>
+      <label for="domain">Dominio (EuroVoc)</label>
       <span class="obligatorio-simbolo" title="Obligatorio">✱</span>
       <!-- input visible pero oculto visualmente, y validable -->
-      <input type="text" id="resource_domain" name="resource_domain" class="sr-only" required aria-hidden="true">
+      <input type="text" id="domain" name="domain" class="sr-only" required aria-hidden="true">
       <div class="container">
         <input type="text" id="searchInput" placeholder="Buscar..." />
         <div id="dropdown" class="dropdown"></div>
@@ -77,6 +78,20 @@
     </form>
     <!-- Fin formulario -->
   </section>
+
+    <!-- Financiación -->
+  <hr class="separador">
+  <h4>financiado por:</h4>
+  <section class="financiacion">
+    <div>
+      <a>
+        <img src="{{ url_for('static', filename='img/financiacion_gob_es_MTDFP.jpg') }}" height="100" alt="Logo financiador: Gob. España">
+        <img src="{{ url_for('static', filename='img/financiacion_PRTR.jpg') }}" height="100" alt="Logo financiador: PRTR">
+        <img src="{{ url_for('static', filename='img/financiacion_es_EU.jpg') }}" height="100" alt="Logo financiador: Unión Europea">
+      </a>
+    </div>
+  </section>
+</main>
 </body>
 <footer class="site-footer">
     <div class="footer-wrapper">

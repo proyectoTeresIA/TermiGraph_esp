@@ -47,7 +47,7 @@
         TermiGraph es una herramienta de transformación de terminologías a RDF, siguiendo el modelo de  <a href="https://www.w3.org/2016/05/ontolex/">OntoLex-Lemon</a>.
       </P>
       <P>
-        Actualmente cuenta con 4 tipos de conversores desarrollados <i>ad hoc</i> para la conversión automática de los recursos (ver <a href="#docu">Tipos de conversores</a>).
+        Actualmente cuenta con 5 tipos de conversores desarrollados <i>ad hoc</i> para la conversión automática de los recursos (ver <a href="#docu">Tipos de conversores</a>).
       </P>
     </div>
     
@@ -66,7 +66,7 @@
               fichero esté en <b>formato .txt</b> y que los términos que estén 
               en forma de lista. Es decir, <b>un término por cada línea, sin signos de puntuación</b>. 
               Para más información sobre su funcionamiento o el formato del archivo, puede consultar el 
-              PDF completo pulsando en el botón "Descargar documentacion".
+              PDF completo pulsando en el botón "Descargar información".
             </p>
             <a href="{{ url_for('static', filename='docs/documentacion_glosario_termigraph.pdf') }}" class="download-btn" download>
               Descargar información
@@ -87,7 +87,7 @@
                 En particular, convierte recursos en <b>TBX-Basic</b> con el <b>estilo DCT</b> (Data 
                 Category as Tag). Se contemplan los <b>módulos: Min, Basic y Core</b>.
                 Para más información sobre su funcionamiento o el formato del archivo, puede consultar el 
-                PDF completo pulsando en el botón "Descargar documentacion".
+                PDF completo pulsando en el botón "Descargar información".
               </p>
               <a href="{{ url_for('static', filename='docs/documentacion_tbxBasic_termigraph.pdf') }}" class="download-btn" download>
                 Descargar información
@@ -106,10 +106,10 @@
             <div class="text-box">
               <p>
                 Este conversor sirve para <b>terminologías en XML</b>, siguiendo la 
-                <b>estructura</b> establecida  en la colección <b><i>Terminologia Oberta</i>
+                <b>estructura</b> establecida en la colección <b><i>Terminologia Oberta</i>
                 del TERMCAT, Centre de Terminologia</b>. 
                 Para más información sobre su funcionamiento o el formato del archivo, puede consultar el 
-                PDF completo pulsando en el botón "Descargar documentacion".
+                PDF completo pulsando en el botón "Descargar información".
               </p>
               <a href="{{ url_for('static', filename='docs/documentacion_termcat_termigraph.pdf') }}" class="download-btn" download>
                 Descargar información 
@@ -131,7 +131,7 @@
                 Este conversor sirve para <b>terminologías en JSON</b>, siguiendo la 
                 <b>estructura</b> establecida por <b>la API de IATE</b>. 
                 Para más información sobre su funcionamiento o el formato del archivo, puede consultar el 
-                PDF completo pulsando en el botón "Descargar documentacion".
+                PDF completo pulsando en el botón "Descargar información".
               </p>
               <a href="{{ url_for('static', filename='docs/documentacion_iate_termigraph.pdf') }}" class="download-btn" download>
                 Descargar información
@@ -143,6 +143,28 @@
           </section>
         </section>
       </section>
+      </div>
+      <!-- docu UNTERM -->
+      <div class="caja-docu">
+        <section id="termcat_docu">
+          <h3>Conversor Excel (UNTerm) </h3>
+          <section class="content-section">
+            <div class="text-box">
+              <p>
+                Este conversor sirve para <b>terminologías en Excel (XLSX)</b>, siguiendo la 
+                <b>estructura</b> establecida por UNTerm, la base terminológica de las Naciones Unidas. 
+                Para más información sobre su funcionamiento o el formato del archivo, puede consultar el 
+                PDF completo pulsando en el botón "Descargar información".
+              </p>
+              <!-- <a href="{{ url_for('static', filename='docs/documentacion_termcat_termigraph.pdf') }}" class="download-btn" download>
+                Descargar información 
+              </a> -->
+            </div>
+            <div class="image-box">
+              <img src="static/img/docu_unterm.svg" alt="img_xlsx">
+            </div>
+          </section>
+        </section>
       </div>
     </div>
 </main>
