@@ -29,7 +29,7 @@ TermiGraph es un servicio de conversión que consta de cinco módulos, los cuale
 ## Flujo de la conversión
 
 <p align="center">
-  <img src="img/termigraph_workflow_esp.svg" alt="termigraph_flujo" style="width:35%; height:auto;">
+  <img src="img/termigraph_workflow_esp.png" alt="termigraph_flujo" style="width:35%; height:auto;">
 </p>
 
 1. **Preprocesado:** cada recurso presenta carácteristicas únicas, tanto de estructura como de contenido, y a menudo la información contenida en el recurso se ha de atomizar o separar. Por ejemplo, la información relativa a la categoría gramatical, el género y el número se presenta en bloque, mientras que en RDF cada elemento se representa mediante una propiedad distinta. Asimismo, durante este proceso, se trata de normalizar la representación de los idiomas mediante el uso de Lexvo. En ocasiones, también se generan formas como 'profesor' y 'profesora' a partir de 'profesor -a'.
