@@ -94,7 +94,10 @@ def convert_from_file(file_path:str, converter_type:str, provData={}):
     actual_ext = Path(file_path).suffix
     # if incorrect format, error message
     if expected_ext != actual_ext:
-        return f"Error: tipo de archivo. Esperado {expected_ext}, proporcionado {actual_ext}"
+        error_mes = "Error de formato, tipo de fichero o conversor equivocado."
+        error_mes += f"Fichero esperado: {expected_ext}"
+        error_mes += f"Fichero proporcionado: proporcionado {actual_ext}"
+        return error_mes
     # create all the directories necessary for data storage
     file_dir = Path(file_path).parent
     file_name = Path(file_path).stem

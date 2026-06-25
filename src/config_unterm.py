@@ -57,3 +57,7 @@ FIELD_COUNTER = {
         "fieldType": "note"
     }
 }
+
+TERM_CLEANER = [
+    "<br>", "</span>", "<span[^>]*>"
+]

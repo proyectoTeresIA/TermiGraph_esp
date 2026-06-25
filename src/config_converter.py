@@ -58,7 +58,7 @@ SPLIT_FILENAME = 'clean_part_'
 
 # Config for Mapeathor
 MAPEATHOR = {
-    'template': 'https://docs.google.com/spreadsheets/d/1PpJ327pgdAwHmRDx9-oDiV02XdCO82mzJoo4bFikgGo/edit?usp=sharing',
+    'template': Path(SCR_DIR, 'Mapeathor_TermiGraph.xlsx'),
     'language': 'rml2014'
 }
 
@@ -104,3 +104,5 @@ PRXS = {
         "wdt": "https://www.wikidata.org/wiki/Property:" ,
         "xsd": "http://www.w3.org/2001/XMLSchema#"
     }
+
+

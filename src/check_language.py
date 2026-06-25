@@ -10,19 +10,40 @@ class ISOCodeExtractor:
         self.graph = Graph()
         self.graph.parse(ontology, format="nt")
 
-    
+    def get_pref(self, lang:str):
+        # prepare query
+        skos = Namespace("http://www.w3.org/2008/05/skos#")
+        pref_property = skos['prefLabel']  
+        q = f"""
+            SELECT ?s
+            WHERE {{ ?s <{pref_property}> ?label . 
+            FILTER(LCASE(STR(?label)) = LCASE("{lang}"))
+            }}
+        """
+        # query
+        results = self.graph.query(q)
+        # store results
+        lang_urls = set()
+        for row in results:
+            lang_urls.add(str(row.s))
+        return lang_urls
+
     def check_iso(self, lang:str):
+        # prepare query
         literal_lang = Literal(lang, datatype=XSD.string)
         iso_types = ['iso639P1Code', 'iso639P3PCode']
         lang_urls = set()
         lvont = Namespace("http://lexvo.org/ontology#")
         for iso_type in iso_types:
-            iso_prop = lvont[iso_type]  # Aquí creas el URIRef para la propiedad
+            # crear el URIRef para la propiedad
+            iso_prop = lvont[iso_type]  
+            # query
             q = f"""
                 SELECT ?s
                 WHERE {{ ?s <{iso_prop}> {literal_lang.n3()} . }}
             """
             results = self.graph.query(q)
+            # store results
             for row in results:
                 lang_urls.add(str(row.s))
         return lang_urls
@@ -48,10 +69,15 @@ class ISOCodeExtractor:
                 for url in url_set:
                     lang_url = url
         else:
-            url_set = self.get_from_label(lang)
+            url_set = self.get_pref(lang)
             if len(url_set) == 1:
                 for url in url_set:
                     lang_url = url
+            elif len(url_set) == 0:
+                url_set = self.get_from_label(lang)
+                if len(url_set) == 1:
+                    for url in url_set:
+                        lang_url = url
         return lang_url
         
 class LanguageRegistry:
@@ -68,8 +94,6 @@ class LanguageRegistry:
             # if not an exception, search in lexvo
             else:
                 lang_url = self.langSearcher.get_url(lang)
-                if len(lang_url) > 0:
-                    registry[lang] = lang_url
-                else: 
-                    registry[lang] = ""
+                print(f"{lang}, url num: {len(lang_url)}, urls:{lang_url}")
+                registry[lang] = lang_url
         return registry

@@ -1,8 +1,9 @@
+import re
 import pandas as pd
 import xml.etree.ElementTree as ET
 from check_language import LanguageRegistry
 from string_cleaner import string_cleaner
-from config_unterm import UNTERM_VALUES, FIELD_COUNTER
+from config_unterm import UNTERM_VALUES, FIELD_COUNTER, TERM_CLEANER
 
 
 class UNTermCleaner:
@@ -68,21 +69,28 @@ class UNTermCleaner:
         return conceptNode
 
     def organize_termInfo(self, termData:dict, field_config:dict, concept_node):
-        # create related nodes
-        entryRecs_node = concept_node.find('entryRecords')
-        entry_node = ET.SubElement(entryRecs_node, "lexEntry")
-        sense_node = ET.SubElement(entry_node, "lexSense")
-        lexform_node = ET.SubElement(entry_node, "lexForm")
-        # check if labels in term (erase from term + add to sense)
-        term = termData['term']
+        # term cleaning
+        term = termData['term'].strip()
+        for issue in TERM_CLEANER:
+            term = re.sub(rf'{issue}', '', term)
         status_labels = UNTERM_VALUES['normAuth'].keys()
+        # check if labels in term (erase from term + add to sense)
+        normAuth_val = ''
         for term_status in status_labels:
             if term_status in term:
                 # erase label from term
                 term = term.replace(term_status, '').strip()
                 # add normAuth
-                normAuth_node = ET.SubElement(sense_node, "normAuth")
-                normAuth_node.text = UNTERM_VALUES['normAuth'][term_status]
+                normAuth_val = UNTERM_VALUES['normAuth'][term_status]
+                break
+        # check that after all the cleaning, there is a term
+        if term == '':
+            return concept_node
+        # create related nodes
+        entryRecs_node = concept_node.find('entryRecords')
+        entry_node = ET.SubElement(entryRecs_node, "lexEntry")
+        sense_node = ET.SubElement(entry_node, "lexSense")
+        lexform_node = ET.SubElement(entry_node, "lexForm")
         # set ids
         conceptID = concept_node.attrib['conceptID']
         termID = f"{conceptID}_{string_cleaner(term)}"
@@ -95,6 +103,10 @@ class UNTermCleaner:
         # add form to form node
         form_node = ET.SubElement(lexform_node, "form")
         form_node.text = term
+        # normative authorization
+        if normAuth_val != '':
+            normAuth_node = ET.SubElement(sense_node, "normAuth")
+            normAuth_node.text = normAuth_val
         # if acronym, add termtype
         if 'termType' in field_config.keys():
             termType_node = ET.SubElement(entry_node, "termType")

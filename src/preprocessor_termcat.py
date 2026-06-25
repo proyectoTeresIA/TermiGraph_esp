@@ -112,11 +112,11 @@ class FormManagement:
                     formID += f"_{extraInfo[infoType]}" 
             else:
                 # iteramos
-                for value in values:
+                for value in extraInfo[infoType]:
                     # creamos nodo
                     valueNode = ET.SubElement(entryNode, infoType)
                     # añadimos valor  
-                    valueNode.text = extraInfo[infoType]                   
+                    valueNode.text = value                  
          # base para crear los ids
         entryID = entryNode.attrib['entryID']
         formNode.set("formID", f"{entryID}_{formID}_form")
@@ -200,6 +200,7 @@ class TermcatCleaner():
     def manage_langInfo(self, entryTC, cleanEntry, lang:str, langReg:dict):
         cleanEntry.set('orig_lang', '')
         cleanEntry.set('ref_lang', '')
+        print()
         # if language is actually a code or cas number
         if lang in self.codeVals.keys():
             # get code type and value
@@ -226,8 +227,6 @@ class TermcatCleaner():
             cleanEntry.set('ref_lang', f"{langReg[lang]}")
         return cleanEntry, langReg
             
-    
-    
     def get_IDs(self, refList, compLists):
         cleanList = []
         for domInd in range(len(refList)):
@@ -454,7 +453,7 @@ class TermcatCleaner():
     def create_langSchema(self, cleanRoot, langReg:dict):
         langsNode = ET.SubElement(cleanRoot, 'resource_languages')
         for language in langReg.keys():
-            langNode = ET.SubElement(langsNode, 'language')
+            langNode = ET.SubElement(langsNode, 'resource_language')
             langNode.text = langReg[language]
         return cleanRoot
 
@@ -470,3 +469,13 @@ class TermcatCleaner():
         cleanRoot, langReg = self.handle_lexData(inRoot, cleanRoot, domain_config, langReg)
         cleanRoot = self.create_langSchema(cleanRoot, langReg)
         return cleanRoot    
+
+if __name__ == '__main__':
+    preprocesador = TermcatCleaner()
+    archivo = r'C:\Users\pdiez\Downloads\cadfdldretpenalipenitenciari.xml'
+    outfile = r'C:\Users\pdiez\Downloads\penitenciario_clean.xml'
+    clean_terminology = preprocesador.clean_terminology(archivo)
+    clean_terminology = ET.ElementTree(clean_terminology)
+    ET.indent(clean_terminology, space="\t", level=0)
+    cleanFile = Path(outfile) 
+    clean_terminology.write(cleanFile, encoding="utf-8", xml_declaration=True)

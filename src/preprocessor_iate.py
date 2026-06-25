@@ -1,5 +1,6 @@
 import json
 from pathlib import Path
+from jsonpath_ng import parse
 import xml.etree.ElementTree as ET
 from string_cleaner import string_cleaner
 from check_language import LanguageRegistry
@@ -19,6 +20,52 @@ class IATECleaner:
             if confidentiality != 'public':
                 public = False
         return public
+
+    def create_domainSchema(self, data, cleanRoot):
+        '''Create the schema of the domains'''
+        # node for saving schema
+        domainSchemaNode = ET.SubElement(cleanRoot, 'domainSchema')
+        # get domains
+        domains_path = '$.items[*].domains[*].domain[*]'
+        expr = parse(domains_path)
+        matches = [m.value for m in expr.find(data)]
+        domain_reg = []
+        for domain_info in matches:
+            domain_label = domain_info['name']
+            if domain_label in domain_reg:
+                continue
+            domain_reg.append(domain_label)
+            # extract data 
+            domainID = string_cleaner(domain_label)
+            eurovocID = ''
+            if 'eurovoc_code' in domain_info.keys():
+                eurovocID = domain_info['eurovoc_code']
+            # if top domain, store
+            if domain_info['level'] == 1:
+                domainNode = ET.SubElement(domainSchemaNode, 'domain')
+                domainNode.text = domain_label
+                domainNode.set('domainID', domainID)
+                domainNode.set('eurovocID', eurovocID)
+            if domain_info['level'] > 1:
+                # añadir los datos de los dominios anteriores
+                topnode = domainSchemaNode
+                for top_domain in domain_info['path']:
+                    topID = string_cleaner(top_domain)
+                    search_path = f"./domain[@domainID='{topID}']" 
+                    if topnode.find(search_path) is not None: 
+                        topnode = topnode.find(search_path)
+                    else:
+                        subnode = ET.SubElement(topnode, 'domain')
+                        subnode.text = top_domain
+                        subnode.set('domainID', topID)
+                        subnode.set('eurocovID', '')
+                        topnode = subnode
+                # añadir los datos del dominio en cuestión
+                domainNode = ET.SubElement(topnode, 'domain')
+                domainNode.text = domain_label
+                domainNode.set('domainID', domainID)
+                domainNode.set('eurovocID', eurovocID)
+        return cleanRoot
 
     def add_refs(self, cleanNode, iateRefs, refSource:str):
         if type(iateRefs) == list:
@@ -77,9 +124,8 @@ class IATECleaner:
             domainsNode = ET.SubElement(conceptNode, f"conceptDomains")
             for domain in iateConcept['domains']:
                 domainNode = ET.SubElement(domainsNode, f"domain")
-                if 'eurovoc_code' in domain['domain'].keys():
-                    eurovocID = str(domain['domain']['eurovoc_code'])
-                    domainNode.set('eurovocID', eurovocID)
+                domainLabel = domain['domain']['name']
+                domainNode.set('domainRef', string_cleaner(domainLabel))
         if 'crossrefs' in iateConcept.keys():
             crossrefsNode = ET.SubElement(conceptNode, f"crossrefs")
             for crossref in iateConcept['crossrefs']:
@@ -320,7 +366,18 @@ class IATECleaner:
         # create the output's root (XML)
         cleanRoot = ET.Element("root")
         fileTitle = Path(filePath).stem
+        cleanRoot = self.create_domainSchema(iate_data, cleanRoot)
         langReg = {}
         cleanRoot, langReg = self.extract_lexicalData(iate_data, cleanRoot, langReg)
         cleanRoot = self.create_langSchema(cleanRoot, langReg)
         return cleanRoot
+
+if __name__ == '__main__':
+    preprocesador = IATECleaner()
+    archivo = r'C:\Users\pdiez\Documents\IATE\IATE_RDF\iate_json_files\abogado_results.json'
+    outfile = r'C:\Users\pdiez\Downloads\abogado_results_clean.xml'
+    clean_terminology = preprocesador.clean_terminology(archivo)
+    clean_terminology = ET.ElementTree(clean_terminology)
+    ET.indent(clean_terminology, space="\t", level=0)
+    cleanFile = Path(outfile) 
+    clean_terminology.write(cleanFile, encoding="utf-8", xml_declaration=True)

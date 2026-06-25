@@ -3,7 +3,7 @@ from flask_session import Session
 from pathlib import Path
 from converter import convert_from_file
 from string_cleaner import string_cleaner
-from config_converter import PREPROCESSORS, EMAIL_CONFIG
+from config_converter import PREPROCESSORS
 from eurovoc_fields import EUROVOC
 import time, threading, json
 from datetime import datetime
@@ -34,6 +34,16 @@ def erase_intermidiate_files(final_file):
         for element in folder.iterdir():
             if Path(element) != Path(final_file):
                 element.unlink()
+
+def validate_file(expected_ext, actual_ext):
+    if expected_ext != actual_ext:
+        return {
+            "success": False,
+            "error": f"""Error de formato, tipo de fichero o conversor equivocado.
+                        \nFichero esperado: {expected_ext}
+                        \nFichero proporcionado: {actual_ext}"""
+            }
+    return {"success": True}
 
 
 # erase previous data, just in case
@@ -92,16 +102,14 @@ def home():
         expectedSuf = PREPROCESSORS[conv_type]['format'].lower()
         fileSuf = Path(input_file.filename).suffix.lower()
         validFormat = expectedSuf == fileSuf
-        # si la extensión del formato no es válida, generamos un error 400
-        if not validFormat:
-            message = "ERROR: Formato de archivo erróneo."
-            message += f"Proporcionado: {fileSuf}." 
-            message += f"Esperado: {expectedSuf}."
-            return jsonify({
-                "error": True,
-                "message": message
-            }), 400
-        # preparamos la carpeta para el post
+        # comprobar formato
+        valid_format = validate_file(expectedSuf, fileSuf)
+        if not valid_format["success"]:
+            return render_template(
+                "error.html",
+                mensaje=valid_format["error"],
+                error=valid_format["error"]
+            ), 400
         global submission_num  # Accede a la variable global
         submission_num += 1    # La modifica
         now = datetime.now()
