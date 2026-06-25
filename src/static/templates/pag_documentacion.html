@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>TermiGraph</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <main>
+  <header class="main-header">
+    <div class="header-wrapper">
+      <div class="logo-left">
+        <a href="https://proyectoteresia.org/">
+          <img src="{{ url_for('static', filename='img/logo_teresia.png') }}" alt="Logo TeresIA">
+        </a>
+      </div>
+      <div class="logo-center">
+        <a href="{{ url_for('home') }}">
+          <img src="{{ url_for('static', filename='img/logo_termigraph.png') }}" alt="Logo Servicio">
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <ul>
+      <li><a href="{{ url_for('home') }}">Conversor</a></li>
+      <li><a href="{{ url_for('documentacion') }}">Sobre TermiGraph</a></li>
+      <li><a href="https://proyectoteresia.org/">Sobre TeresIA</a></li>
+    </ul>
+  </nav>
+
+  
+  <section id="documentacion" class="main-sec">
+    <h2>Sobre TermiGraph</h2>
+    <nav class="sub-nav">
+        <ul>
+          <li><a href="#descripcion">¿QUÉ ES TermiGraph?</a></li>
+          <li><a href="#docu">TIPOS DE CONVERSORES</a></li>
+        </ul>
+    </nav>
+    
+
+    <h4>¿QUÉ ES TermiGraph?</h4>
+    <div class="descripcion" id="descripcion">
+      <P>
+        TermiGraph es una herramienta de transformación de terminologías a RDF, siguiendo el modelo de  <a href="https://www.w3.org/2016/05/ontolex/">OntoLex-Lemon</a>.
+      </P>
+      <P>
+        Actualmente cuenta con 5 tipos de conversores desarrollados <i>ad hoc</i> para la conversión automática de los recursos (ver <a href="#docu">Tipos de conversores</a>).
+      </P>
+    </div>
+    
+    <hr class="separador">
+
+    <h4>TIPOS DE CONVERSORES</h4>
+
+    <div class="contenedor-cajas" id="docu">
+      <!-- docu glosario -->
+      <div class="caja-docu" id="glosario_docu">
+        <h3>Conversor glosario monolingüe </h3>
+        <section class="content-section">
+          <div class="text-box">
+            <p>
+              Este conversor sirve para <b>glosarios monolingües</b>. Se requiere que el
+              fichero esté en <b>formato .txt</b> y que los términos que estén 
+              en forma de lista. Es decir, <b>un término por cada línea, sin signos de puntuación</b>. 
+              Para más información sobre su funcionamiento o el formato del archivo, puede consultar el 
+              PDF completo pulsando en el botón "Descargar información".
+            </p>
+            <a href="{{ url_for('static', filename='docs/documentacion_glosario_termigraph.pdf') }}" class="download-btn" download>
+              Descargar información
+            </a>
+            <a href="{{ url_for('static', filename='docs/demo_glosario_animales.txt') }}" class="download-btn" download>
+              Descargar ejemplo 
+            </a>
+          </div>
+          <div class="image-box">
+            <img src="static/img/docu_ejemplo_glosario.svg" alt="imagen_glosario">
+          </div>
+        </section>
+      </div>
+      <!-- docu TBX (uzei) -->
+      <div class="caja-docu" id="tbxBasic_docu">
+          <h3>Conversor de TBX (Basic) </h3>
+          <section class="content-section">
+            <div class="text-box">
+              <p>
+                Este conversor sirve para <b>terminologías en TBX (TermBase eXchange)</b>. 
+                En particular, convierte recursos en <b>TBX-Basic</b> con el <b>estilo DCT</b> (Data 
+                Category as Tag). Se contemplan los <b>módulos: Min, Basic y Core</b>.
+                Para más información sobre su funcionamiento o el formato del archivo, puede consultar el 
+                PDF completo pulsando en el botón "Descargar información".
+              </p>
+              <a href="{{ url_for('static', filename='docs/documentacion_tbxBasic_termigraph.pdf') }}" class="download-btn" download>
+                Descargar información
+              </a>
+              <!-- <a href="{{ url_for('static', filename='') }}" class="download-btn" download>
+                Descargar ejemplo 
+              </a> -->
+            </div>
+            <div class="image-box">
+              <img src="static/img/docu_tbxBasic.svg" alt="Imagen de ejemplo">
+            </div>
+          </section>
+      </div>
+      <!-- docu TERMCAT -->
+      <div class="caja-docu">
+        <section id="termcat_docu">
+          <h3>Conversor XML-TERMCAT </h3>
+          <section class="content-section">
+            <div class="text-box">
+              <p>
+                Este conversor sirve para <b>terminologías en XML</b>, siguiendo la 
+                <b>estructura</b> establecida en la colección <b><i>Terminologia Oberta</i>
+                del TERMCAT, Centre de Terminologia</b>. 
+                Para más información sobre su funcionamiento o el formato del archivo, puede consultar el 
+                PDF completo pulsando en el botón "Descargar información".
+              </p>
+              <a href="{{ url_for('static', filename='docs/documentacion_termcat_termigraph.pdf') }}" class="download-btn" download>
+                Descargar información 
+              </a>
+              <a href="{{ url_for('static', filename='docs/termcat_ejemplo.xml') }}" class="download-btn" download>
+                Descargar ejemplo 
+              </a>
+            </div>
+            <div class="image-box">
+              <img src="static/img/docu_termcat.svg" alt="img_xml">
+            </div>
+          </section>
+        </section>
+      </div>
+      <!-- docu IATE -->
+      <div class="caja-docu">
+        <section id="iate_docu">
+          <h3>Conversor JSON-IATE </h3>
+          <section class="content-section">
+            <div class="text-box">
+              <p>
+                Este conversor sirve para <b>terminologías en JSON</b>, siguiendo la 
+                <b>estructura</b> establecida por <b>la API de IATE</b>. 
+                Para más información sobre su funcionamiento o el formato del archivo, puede consultar el 
+                PDF completo pulsando en el botón "Descargar información".
+              </p>
+              <a href="{{ url_for('static', filename='docs/documentacion_iate_termigraph.pdf') }}" class="download-btn" download>
+                Descargar información
+              </a>
+              <a href="{{ url_for('static', filename='docs/anticipación_iate_results.json') }}" class="download-btn" download>
+                Descargar ejemplo 
+              </a>
+            </div>
+            <div class="image-box">
+              <img src="static/img/docu_iate.svg" alt="img_json">
+            </div>
+          </section>
+        </section>
+      </section>
+      </div>
+      <!-- docu UNTERM -->
+      <div class="caja-docu">
+        <section id="termcat_docu">
+          <h3>Conversor Excel (UNTerm) </h3>
+          <section class="content-section">
+            <div class="text-box">
+              <p>
+                Este conversor sirve para <b>terminologías en Excel (XLSX)</b>, siguiendo la 
+                <b>estructura</b> establecida por UNTerm, la base terminológica de las Naciones Unidas. 
+                Para más información sobre su funcionamiento o el formato del archivo, puede consultar el 
+                PDF completo pulsando en el botón "Descargar información".
+              </p>
+              <a href="{{ url_for('static', filename='docs/documentacion_unterm_termigraph.pdf') }}" class="download-btn" download>
+                Descargar información 
+              </a>
+              <!-- <a href="{{ url_for('static', filename='') }}" class="download-btn" download>
+                Descargar ejemplo 
+              </a> -->
+            </div>
+            <div class="image-box">
+              <img src="static/img/docu_unterm.svg" alt="img_xlsx">
+            </div>
+          </section>
+        </section>
+      </div>
+    </div>
+</main>
+</body>
+<!-- Footer Section -->
+<footer class="site-footer">
+    <div class="footer-wrapper">
+    <!-- Contenedor Izquierdo -->
+    <div class="footer-container left">
+      <div class="footer-logos">
+        <a href="https://proyectoteresia.org/">
+          <img src="{{ url_for('static', filename='img/logo_teresia_fondo.svg') }}" alt="Logo_TeresIA" class="footer-logo">
+        </a>
+        <a href="https://www.upm.es/">
+          <img src="{{ url_for('static', filename='img/escudo_upm.svg') }}" alt="Logo_UPM" class="footer-logo">
+        </a>
+        <a href="https://oeg.fi.upm.es">
+          <img src="{{ url_for('static', filename='img/logo_oeg.svg') }}" alt="Logo_OEG" class="footer-logo">
+        </a>
+      </div> 
+    </div>
+    <!-- Derechos -->
+    <p class="footer-rights">
+        © 2025 TeresIA. Todos los derechos reservados
+    </p>
+    <!-- Contenedor Derecho -->
+    <div class="footer-container right">
+      <div class="footer-socials">
+        <a href="https://github.com/proyectoTeresIA/TermiGraph_esp" aria-label="GitHub">
+          <img src="{{ url_for('static', filename='img/logo_github.svg') }}" alt="GitHub_TermiGraph">
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+</html>

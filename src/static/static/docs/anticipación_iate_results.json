@@ -1,0 +1,814 @@
+{
+    "items": [
+        {
+            "self": {
+                "href": "https://test.iate2.eu/em-api/ws/entries/8279204991DDAE7CE053C3E4A79E4140",
+                "method": "GET",
+                "accept_media_types": [
+                    "application/vnd.iate.entry+json;version=1",
+                    "application/vnd.iate.entry+json;version=2",
+                    "application/vnd.iate.entry+json",
+                    "application/json",
+                    "*/*"
+                ]
+            },
+            "code": "8279204991DDAE7CE053C3E4A79E4140",
+            "language": {
+                "es": {
+                    "self": {
+                        "href": "https://test.iate2.eu/em-api/ws/entries/8279204991DDAE7CE053C3E4A79E4140/language-entries/es",
+                        "method": "GET",
+                        "accept_media_types": [
+                            "application/vnd.iate.language-entry+json;version=1",
+                            "application/vnd.iate.language-entry+json;version=2",
+                            "application/vnd.iate.language-entry+json",
+                            "application/json",
+                            "*/*"
+                        ]
+                    },
+                    "term_entries": [
+                        {
+                            "self": {
+                                "href": "https://test.iate2.eu/em-api/ws/entries/8279204991DDAE7CE053C3E4A79E4140/language-entries/es/term-entries/2F552583938F4B628958E93F97E650B5",
+                                "method": "GET",
+                                "accept_media_types": [
+                                    "application/vnd.iate.term-entry+json;version=1",
+                                    "application/vnd.iate.term-entry+json;version=2",
+                                    "application/vnd.iate.term-entry+json",
+                                    "application/json",
+                                    "*/*"
+                                ]
+                            },
+                            "code": "2F552583938F4B628958E93F97E650B5",
+                            "id": 2792113,
+                            "type": {
+                                "self": {
+                                    "href": "https://test.iate2.eu/em-api/ws/inventories/2808",
+                                    "method": "GET",
+                                    "accept_media_types": [
+                                        "application/json"
+                                    ]
+                                },
+                                "code": 4,
+                                "name": "term"
+                            },
+                            "term_value": "anticipación",
+                            "term_references": [
+                                {
+                                    "text": "Glosario multilingüe de protección civil 1990,Grupo de Trabajo Comisión Europea/Estados Miembros",
+                                    "metadata": {
+                                        "confidentiality": {
+                                            "self": {
+                                                "href": "https://test.iate2.eu/em-api/ws/inventories/2292",
+                                                "method": "GET",
+                                                "accept_media_types": [
+                                                    "application/json"
+                                                ]
+                                            },
+                                            "code": 0,
+                                            "name": "public"
+                                        }
+                                    },
+                                    "tooltip_text": "Glosario multilingüe de protección civil 1990...",
+                                    "code": "3C7310F9942948A093C1DA70D3706E8E",
+                                    "display_order": 0
+                                }
+                            ],
+                            "metadata": {
+                                "creation": {
+                                    "institution": {
+                                        "name": "COM",
+                                        "self": {
+                                            "href": "https://test.iate2.eu/uac-api/ws/institutions/95C369D8146F4E92BC3E00566C278F8D",
+                                            "method": "GET",
+                                            "accept_media_types": [
+                                                "application/json"
+                                            ]
+                                        },
+                                        "code": "95C369D8146F4E92BC3E00566C278F8D"
+                                    },
+                                    "division": {
+                                        "name": "Central Terminology",
+                                        "self": {
+                                            "href": "https://test.iate2.eu/uac-api/ws/divisions/B2D01AFD4FEB4D7FA9063DEF7D502039",
+                                            "method": "GET",
+                                            "accept_media_types": [
+                                                "application/json"
+                                            ]
+                                        },
+                                        "code": "B2D01AFD4FEB4D7FA9063DEF7D502039"
+                                    },
+                                    "timestamp": "2003-09-23T22:00:00.001Z"
+                                },
+                                "modification": {
+                                    "institution": {
+                                        "name": "CdT",
+                                        "self": {
+                                            "href": "https://test.iate2.eu/uac-api/ws/institutions/C675A92E415A4D828CD1DD8E96159614",
+                                            "method": "GET",
+                                            "accept_media_types": [
+                                                "application/json"
+                                            ]
+                                        },
+                                        "code": "C675A92E415A4D828CD1DD8E96159614"
+                                    },
+                                    "division": {
+                                        "name": "Central Terminology",
+                                        "self": {
+                                            "href": "https://test.iate2.eu/uac-api/ws/divisions/AD12B908C455402185FF61BB9028B22D",
+                                            "method": "GET",
+                                            "accept_media_types": [
+                                                "application/json"
+                                            ]
+                                        },
+                                        "code": "AD12B908C455402185FF61BB9028B22D"
+                                    },
+                                    "timestamp": "2014-05-19T01:13:41.001Z"
+                                },
+                                "institution": {
+                                    "name": "COM",
+                                    "self": {
+                                        "href": "https://test.iate2.eu/uac-api/ws/institutions/95C369D8146F4E92BC3E00566C278F8D",
+                                        "method": "GET",
+                                        "accept_media_types": [
+                                            "application/json"
+                                        ]
+                                    },
+                                    "code": "95C369D8146F4E92BC3E00566C278F8D"
+                                },
+                                "owned_by_creator": true,
+                                "validation_metadata": {
+                                    "institution": {
+                                        "name": "CdT",
+                                        "self": {
+                                            "href": "https://test.iate2.eu/uac-api/ws/institutions/C675A92E415A4D828CD1DD8E96159614",
+                                            "method": "GET",
+                                            "accept_media_types": [
+                                                "application/json"
+                                            ]
+                                        },
+                                        "code": "C675A92E415A4D828CD1DD8E96159614"
+                                    },
+                                    "division": {
+                                        "name": "Central Terminology",
+                                        "self": {
+                                            "href": "https://test.iate2.eu/uac-api/ws/divisions/AD12B908C455402185FF61BB9028B22D",
+                                            "method": "GET",
+                                            "accept_media_types": [
+                                                "application/json"
+                                            ]
+                                        },
+                                        "code": "AD12B908C455402185FF61BB9028B22D"
+                                    },
+                                    "timestamp": "2014-05-19T01:13:41.001Z"
+                                },
+                                "display_order": 0,
+                                "confidentiality": {
+                                    "self": {
+                                        "href": "https://test.iate2.eu/em-api/ws/inventories/2292",
+                                        "method": "GET",
+                                        "accept_media_types": [
+                                            "application/json"
+                                        ]
+                                    },
+                                    "code": 0,
+                                    "name": "public"
+                                },
+                                "validation": {
+                                    "self": {
+                                        "href": "https://test.iate2.eu/em-api/ws/inventories/2865",
+                                        "method": "GET",
+                                        "accept_media_types": [
+                                            "application/json"
+                                        ]
+                                    },
+                                    "code": 1,
+                                    "name": "Valid"
+                                },
+                                "reliability": {
+                                    "self": {
+                                        "href": "https://test.iate2.eu/em-api/ws/inventories/2631",
+                                        "method": "GET",
+                                        "accept_media_types": [
+                                            "application/json"
+                                        ]
+                                    },
+                                    "code": 3,
+                                    "name": "reliable"
+                                }
+                            },
+                            "highlighted_term_value": "<mark>anticipación</mark>",
+                            "initial_source_id": "Eurodicautom",
+                            "legacy_id": "BTB-CIF90-112",
+                            "update": {
+                                "href": "https://test.iate2.eu/em-api/ws/entries/8279204991DDAE7CE053C3E4A79E4140/language-entries/es/term-entries/2F552583938F4B628958E93F97E650B5",
+                                "method": "PATCH",
+                                "content_media_types": [
+                                    "application/vnd.iate.json-patch+json;version=1",
+                                    "application/vnd.iate.json-patch+json",
+                                    "application/json",
+                                    "*/*"
+                                ],
+                                "accept_media_types": [
+                                    "application/vnd.iate.entry+json;version=1",
+                                    "application/vnd.iate.entry+json;version=2",
+                                    "application/vnd.iate.entry+json",
+                                    "application/json",
+                                    "*/*",
+                                    "application/vnd.iate.language-entry+json;version=1",
+                                    "application/vnd.iate.language-entry+json;version=2",
+                                    "application/vnd.iate.language-entry+json",
+                                    "application/vnd.iate.term-entry+json;version=1",
+                                    "application/vnd.iate.term-entry+json;version=2",
+                                    "application/vnd.iate.term-entry+json"
+                                ]
+                            },
+                            "delete": {
+                                "href": "https://test.iate2.eu/em-api/ws/entries/8279204991DDAE7CE053C3E4A79E4140/language-entries/es/term-entries/2F552583938F4B628958E93F97E650B5",
+                                "method": "DELETE",
+                                "accept_media_types": [
+                                    "application/vnd.iate.entry+json;version=1",
+                                    "application/vnd.iate.entry+json;version=2",
+                                    "application/vnd.iate.entry+json",
+                                    "application/json",
+                                    "*/*",
+                                    "application/vnd.iate.language-entry+json;version=1",
+                                    "application/vnd.iate.language-entry+json;version=2",
+                                    "application/vnd.iate.language-entry+json",
+                                    "application/vnd.iate.term-entry+json;version=1",
+                                    "application/vnd.iate.term-entry+json;version=2",
+                                    "application/vnd.iate.term-entry+json"
+                                ]
+                            }
+                        }
+                    ],
+                    "definition": {
+                        "tooltip_value": "previsión de posibles sucesos o desastres y p...",
+                        "value": "previsión de posibles sucesos o desastres y preparación para ellos",
+                        "references": [
+                            {
+                                "text": "Glosario multilingüe de protección civil 1990,Grupo de Trabajo Comisión Europea/Estados Miembros",
+                                "metadata": {
+                                    "confidentiality": {
+                                        "self": {
+                                            "href": "https://test.iate2.eu/em-api/ws/inventories/2292",
+                                            "method": "GET",
+                                            "accept_media_types": [
+                                                "application/json"
+                                            ]
+                                        },
+                                        "code": 0,
+                                        "name": "public"
+                                    }
+                                },
+                                "tooltip_text": "Glosario multilingüe de protección civil 1990...",
+                                "code": "CADE2FE8068B4D49BE98D80150EF96DA",
+                                "display_order": 0
+                            }
+                        ]
+                    },
+                    "metadata": {
+                        "creation": {
+                            "institution": {
+                                "name": "COM",
+                                "self": {
+                                    "href": "https://test.iate2.eu/uac-api/ws/institutions/95C369D8146F4E92BC3E00566C278F8D",
+                                    "method": "GET",
+                                    "accept_media_types": [
+                                        "application/json"
+                                    ]
+                                },
+                                "code": "95C369D8146F4E92BC3E00566C278F8D"
+                            },
+                            "division": {
+                                "name": "Central Terminology",
+                                "self": {
+                                    "href": "https://test.iate2.eu/uac-api/ws/divisions/B2D01AFD4FEB4D7FA9063DEF7D502039",
+                                    "method": "GET",
+                                    "accept_media_types": [
+                                        "application/json"
+                                    ]
+                                },
+                                "code": "B2D01AFD4FEB4D7FA9063DEF7D502039"
+                            },
+                            "timestamp": "2003-09-23T22:00:00.001Z"
+                        },
+                        "modification": {
+                            "institution": {
+                                "name": "COM",
+                                "self": {
+                                    "href": "https://test.iate2.eu/uac-api/ws/institutions/95C369D8146F4E92BC3E00566C278F8D",
+                                    "method": "GET",
+                                    "accept_media_types": [
+                                        "application/json"
+                                    ]
+                                },
+                                "code": "95C369D8146F4E92BC3E00566C278F8D"
+                            },
+                            "division": {
+                                "name": "Central Terminology",
+                                "self": {
+                                    "href": "https://test.iate2.eu/uac-api/ws/divisions/B2D01AFD4FEB4D7FA9063DEF7D502039",
+                                    "method": "GET",
+                                    "accept_media_types": [
+                                        "application/json"
+                                    ]
+                                },
+                                "code": "B2D01AFD4FEB4D7FA9063DEF7D502039"
+                            },
+                            "timestamp": "2003-09-23T22:00:00.001Z"
+                        },
+                        "institution": {
+                            "name": "COM",
+                            "self": {
+                                "href": "https://test.iate2.eu/uac-api/ws/institutions/95C369D8146F4E92BC3E00566C278F8D",
+                                "method": "GET",
+                                "accept_media_types": [
+                                    "application/json"
+                                ]
+                            },
+                            "code": "95C369D8146F4E92BC3E00566C278F8D"
+                        },
+                        "owned_by_creator": true,
+                        "validation_metadata": {
+                            "institution": {
+                                "name": "COM",
+                                "self": {
+                                    "href": "https://test.iate2.eu/uac-api/ws/institutions/95C369D8146F4E92BC3E00566C278F8D",
+                                    "method": "GET",
+                                    "accept_media_types": [
+                                        "application/json"
+                                    ]
+                                },
+                                "code": "95C369D8146F4E92BC3E00566C278F8D"
+                            },
+                            "division": {
+                                "name": "Central Terminology",
+                                "self": {
+                                    "href": "https://test.iate2.eu/uac-api/ws/divisions/B2D01AFD4FEB4D7FA9063DEF7D502039",
+                                    "method": "GET",
+                                    "accept_media_types": [
+                                        "application/json"
+                                    ]
+                                },
+                                "code": "B2D01AFD4FEB4D7FA9063DEF7D502039"
+                            },
+                            "timestamp": "2003-09-23T22:00:00.001Z"
+                        },
+                        "confidentiality": {
+                            "self": {
+                                "href": "https://test.iate2.eu/em-api/ws/inventories/2292",
+                                "method": "GET",
+                                "accept_media_types": [
+                                    "application/json"
+                                ]
+                            },
+                            "code": 0,
+                            "name": "public"
+                        },
+                        "validation": {
+                            "self": {
+                                "href": "https://test.iate2.eu/em-api/ws/inventories/2865",
+                                "method": "GET",
+                                "accept_media_types": [
+                                    "application/json"
+                                ]
+                            },
+                            "code": 1,
+                            "name": "Valid"
+                        }
+                    },
+                    "update": {
+                        "href": "https://test.iate2.eu/em-api/ws/entries/8279204991DDAE7CE053C3E4A79E4140/language-entries/es",
+                        "method": "PATCH",
+                        "content_media_types": [
+                            "application/vnd.iate.json-patch+json;version=1",
+                            "application/vnd.iate.json-patch+json",
+                            "application/json",
+                            "*/*"
+                        ],
+                        "accept_media_types": [
+                            "application/vnd.iate.entry+json;version=1",
+                            "application/vnd.iate.entry+json;version=2",
+                            "application/vnd.iate.entry+json",
+                            "application/json",
+                            "*/*",
+                            "application/vnd.iate.language-entry+json;version=1",
+                            "application/vnd.iate.language-entry+json;version=2",
+                            "application/vnd.iate.language-entry+json"
+                        ]
+                    },
+                    "delete": {
+                        "href": "https://test.iate2.eu/em-api/ws/entries/8279204991DDAE7CE053C3E4A79E4140/language-entries/es",
+                        "method": "DELETE",
+                        "accept_media_types": [
+                            "application/vnd.iate.entry+json;version=1",
+                            "application/vnd.iate.entry+json;version=2",
+                            "application/vnd.iate.entry+json",
+                            "application/json",
+                            "*/*",
+                            "application/vnd.iate.language-entry+json;version=1",
+                            "application/vnd.iate.language-entry+json;version=2",
+                            "application/vnd.iate.language-entry+json"
+                        ]
+                    },
+                    "create_term_entry": {
+                        "href": "https://test.iate2.eu/em-api/ws/entries/8279204991DDAE7CE053C3E4A79E4140/language-entries/es/term-entries",
+                        "method": "POST",
+                        "content_media_types": [
+                            "application/vnd.iate.term-entry-create+json;version=1",
+                            "application/vnd.iate.term-entry-create+json",
+                            "application/json",
+                            "*/*"
+                        ],
+                        "accept_media_types": [
+                            "application/vnd.iate.entry+json;version=1",
+                            "application/vnd.iate.entry+json;version=2",
+                            "application/vnd.iate.entry+json",
+                            "application/json",
+                            "*/*",
+                            "application/vnd.iate.language-entry+json;version=1",
+                            "application/vnd.iate.language-entry+json;version=2",
+                            "application/vnd.iate.language-entry+json",
+                            "application/vnd.iate.term-entry+json;version=1",
+                            "application/vnd.iate.term-entry+json;version=2",
+                            "application/vnd.iate.term-entry+json"
+                        ]
+                    }
+                }
+            },
+            "id": 1084418,
+            "domains": [
+                {
+                    "domain": {
+                        "self": {
+                            "href": "https://test.iate2.eu/em-api/ws/domains/3205A70EA2BA420E8B8D95E130949C2C",
+                            "method": "GET",
+                            "accept_media_types": [
+                                "application/json"
+                            ]
+                        },
+                        "code": "3205A70EA2BA420E8B8D95E130949C2C",
+                        "eurovoc_code": "5881",
+                        "path": [
+                            "SOCIAL QUESTIONS",
+                            "health"
+                        ],
+                        "name": "medical science",
+                        "level": 3,
+                        "parent": "134CA1BAAAE64D5D93F5F17B0ADD5E18"
+                    }
+                }
+            ],
+            "metadata": {
+                "creation": {
+                    "institution": {
+                        "name": "COM",
+                        "self": {
+                            "href": "https://test.iate2.eu/uac-api/ws/institutions/95C369D8146F4E92BC3E00566C278F8D",
+                            "method": "GET",
+                            "accept_media_types": [
+                                "application/json"
+                            ]
+                        },
+                        "code": "95C369D8146F4E92BC3E00566C278F8D"
+                    },
+                    "division": {
+                        "name": "Central Terminology",
+                        "self": {
+                            "href": "https://test.iate2.eu/uac-api/ws/divisions/B2D01AFD4FEB4D7FA9063DEF7D502039",
+                            "method": "GET",
+                            "accept_media_types": [
+                                "application/json"
+                            ]
+                        },
+                        "code": "B2D01AFD4FEB4D7FA9063DEF7D502039"
+                    },
+                    "timestamp": "2001-08-08T22:00:00.001Z"
+                },
+                "modification": {
+                    "institution": {
+                        "name": "COM",
+                        "self": {
+                            "href": "https://test.iate2.eu/uac-api/ws/institutions/95C369D8146F4E92BC3E00566C278F8D",
+                            "method": "GET",
+                            "accept_media_types": [
+                                "application/json"
+                            ]
+                        },
+                        "code": "95C369D8146F4E92BC3E00566C278F8D"
+                    },
+                    "division": {
+                        "name": "Central Terminology",
+                        "self": {
+                            "href": "https://test.iate2.eu/uac-api/ws/divisions/B2D01AFD4FEB4D7FA9063DEF7D502039",
+                            "method": "GET",
+                            "accept_media_types": [
+                                "application/json"
+                            ]
+                        },
+                        "code": "B2D01AFD4FEB4D7FA9063DEF7D502039"
+                    },
+                    "timestamp": "2022-03-29T21:04:08.051Z"
+                },
+                "institution": {
+                    "name": "COM",
+                    "self": {
+                        "href": "https://test.iate2.eu/uac-api/ws/institutions/95C369D8146F4E92BC3E00566C278F8D",
+                        "method": "GET",
+                        "accept_media_types": [
+                            "application/json"
+                        ]
+                    },
+                    "code": "95C369D8146F4E92BC3E00566C278F8D"
+                },
+                "owned_by_creator": true,
+                "confidentiality": {
+                    "self": {
+                        "href": "https://test.iate2.eu/em-api/ws/inventories/2292",
+                        "method": "GET",
+                        "accept_media_types": [
+                            "application/json"
+                        ]
+                    },
+                    "code": 0,
+                    "name": "public"
+                },
+                "primarity": {
+                    "self": {
+                        "href": "https://test.iate2.eu/em-api/ws/inventories/2601",
+                        "method": "GET",
+                        "accept_media_types": [
+                            "application/json"
+                        ]
+                    },
+                    "code": 0,
+                    "name": "not primary"
+                },
+                "status": {
+                    "self": {
+                        "href": "https://test.iate2.eu/em-api/ws/inventories/2323",
+                        "method": "GET",
+                        "accept_media_types": [
+                            "application/json"
+                        ]
+                    },
+                    "code": 1,
+                    "name": "not raw"
+                },
+                "locking": {
+                    "lock": {
+                        "href": "https://test.iate2.eu/em-api/ws/entries/8279204991DDAE7CE053C3E4A79E4140/_lock",
+                        "method": "GET",
+                        "accept_media_types": [
+                            "application/vnd.iate.entry+json;version=1",
+                            "application/vnd.iate.entry+json;version=2",
+                            "application/vnd.iate.entry+json",
+                            "application/json",
+                            "*/*"
+                        ]
+                    }
+                }
+            },
+            "score": 204933300000.0,
+            "result_group": 3,
+            "update": {
+                "href": "https://test.iate2.eu/em-api/ws/entries/8279204991DDAE7CE053C3E4A79E4140",
+                "method": "PATCH",
+                "content_media_types": [
+                    "application/vnd.iate.json-patch+json;version=1",
+                    "application/vnd.iate.json-patch+json",
+                    "application/json",
+                    "*/*"
+                ],
+                "accept_media_types": [
+                    "application/vnd.iate.entry+json;version=1",
+                    "application/vnd.iate.entry+json;version=2",
+                    "application/vnd.iate.entry+json",
+                    "application/json",
+                    "*/*"
+                ]
+            },
+            "delete": {
+                "href": "https://test.iate2.eu/em-api/ws/entries/8279204991DDAE7CE053C3E4A79E4140",
+                "method": "DELETE"
+            },
+            "create_language_entry": {
+                "href": "https://test.iate2.eu/em-api/ws/entries/8279204991DDAE7CE053C3E4A79E4140/language-entries/language-code",
+                "method": "POST",
+                "content_media_types": [
+                    "application/vnd.iate.language-entry-create+json;version=1",
+                    "application/vnd.iate.language-entry-create+json",
+                    "application/json",
+                    "*/*"
+                ],
+                "accept_media_types": [
+                    "application/vnd.iate.entry+json;version=1",
+                    "application/vnd.iate.entry+json;version=2",
+                    "application/vnd.iate.entry+json",
+                    "application/json",
+                    "*/*",
+                    "application/vnd.iate.language-entry+json;version=1",
+                    "application/vnd.iate.language-entry+json;version=2",
+                    "application/vnd.iate.language-entry+json"
+                ]
+            }
+        }
+    ],
+    "offset": 0,
+    "limit": 5,
+    "size": 1,
+    "self": {
+        "href": "https://test.iate2.eu/em-api/ws/entries/_search?expand=true&limit=5&offset=0",
+        "method": "POST",
+        "content_media_types": [
+            "application/vnd.iate.entry-search+json;version=1",
+            "application/vnd.iate.entry-search+json",
+            "application/json",
+            "*/*"
+        ],
+        "accept_media_types": [
+            "application/vnd.iate.entry+json;version=1",
+            "application/vnd.iate.entry+json;version=2",
+            "application/vnd.iate.entry+json",
+            "application/json",
+            "*/*"
+        ]
+    },
+    "create": {
+        "href": "https://test.iate2.eu/em-api/ws/entries",
+        "method": "POST",
+        "content_media_types": [
+            "application/vnd.iate.entry-create+json;version=1",
+            "application/vnd.iate.entry-create+json",
+            "application/json",
+            "*/*"
+        ],
+        "accept_media_types": [
+            "application/vnd.iate.entry+json;version=1",
+            "application/vnd.iate.entry+json;version=2",
+            "application/vnd.iate.entry+json",
+            "application/json",
+            "*/*"
+        ]
+    },
+    "search": {
+        "href": "https://test.iate2.eu/em-api/ws/entries/_search",
+        "method": "POST",
+        "content_media_types": [
+            "application/vnd.iate.entry-search+json;version=1",
+            "application/vnd.iate.entry-search+json",
+            "application/json",
+            "*/*"
+        ],
+        "accept_media_types": [
+            "application/vnd.iate.entry+json;version=1",
+            "application/vnd.iate.entry+json;version=2",
+            "application/vnd.iate.entry+json",
+            "application/json",
+            "*/*"
+        ]
+    },
+    "bulk_creation_from_tem_monolingual": {
+        "href": "https://test.iate2.eu/em-api/ws/entries/_bulk_creation_from_tem_monolingual",
+        "method": "POST",
+        "content_media_types": [
+            "application/vnd.iate.entry-bulk-creation-from-tem-monolingual+json;version=1",
+            "application/vnd.iate.entry-bulk-creation-from-tem-monolingual+json",
+            "application/json",
+            "*/*"
+        ],
+        "accept_media_types": [
+            "application/vnd.iate.entry-bulk-creation-from-tem-monolingual-response+json;entry_version=V1;version=1_1",
+            "application/vnd.iate.entry-bulk-creation-from-tem-monolingual-response+json;entry_version=V2;version=1_2",
+            "application/vnd.iate.entry-bulk-creation-from-tem-monolingual-response+json",
+            "application/json",
+            "*/*"
+        ]
+    },
+    "bulk_creation_from_tem_bilingual": {
+        "href": "https://test.iate2.eu/em-api/ws/entries/_bulk_creation_from_tem_bilingual",
+        "method": "POST",
+        "content_media_types": [
+            "application/vnd.iate.entry-bulk-creation-from-tem-bilingual+json;version=1",
+            "application/vnd.iate.entry-bulk-creation-from-tem-bilingual+json",
+            "application/json",
+            "*/*"
+        ],
+        "accept_media_types": [
+            "application/vnd.iate.entry-bulk-creation-from-tem-bilingual-response+json;entry_version=V1;tem_alignment_version=V1;version=1_1",
+            "application/vnd.iate.entry-bulk-creation-from-tem-bilingual-response+json;entry_version=V2;tem_alignment_version=V1;version=1_2",
+            "application/vnd.iate.entry-bulk-creation-from-tem-bilingual-response+json",
+            "application/json",
+            "*/*"
+        ]
+    },
+    "advanced_search": {
+        "href": "https://test.iate2.eu/em-api/ws/entries/_advanced_search",
+        "method": "POST",
+        "content_media_types": [
+            "application/vnd.iate.entry-advanced-search+json;version=1",
+            "application/vnd.iate.entry-advanced-search+json",
+            "application/json",
+            "*/*"
+        ],
+        "accept_media_types": [
+            "application/vnd.iate.entry+json;version=1",
+            "application/vnd.iate.entry+json;version=2",
+            "application/vnd.iate.entry+json",
+            "application/json",
+            "*/*"
+        ]
+    },
+    "merge": {
+        "href": "https://test.iate2.eu/em-api/ws/entries/_merge",
+        "method": "POST",
+        "content_media_types": [
+            "application/vnd.iate.entry-merge+json;version=1",
+            "application/vnd.iate.entry-merge+json",
+            "application/json",
+            "*/*"
+        ],
+        "accept_media_types": [
+            "application/vnd.iate.entry+json;version=1",
+            "application/vnd.iate.entry+json;version=2",
+            "application/vnd.iate.entry+json",
+            "application/json",
+            "*/*"
+        ]
+    },
+    "automatic_merge": {
+        "href": "https://test.iate2.eu/em-api/ws/entries/_automatic_merge",
+        "method": "POST",
+        "content_media_types": [
+            "application/vnd.iate.entry-automatic-merge+json;version=1",
+            "application/vnd.iate.entry-automatic-merge+json",
+            "application/json",
+            "*/*"
+        ],
+        "accept_media_types": [
+            "application/vnd.iate.entry+json;version=1",
+            "application/vnd.iate.entry+json;version=2",
+            "application/vnd.iate.entry+json",
+            "application/json",
+            "*/*"
+        ]
+    },
+    "dry_automatic_merge": {
+        "href": "https://test.iate2.eu/em-api/ws/entries/_dry_automatic_merge",
+        "method": "POST",
+        "content_media_types": [
+            "application/vnd.iate.entry-automatic-merge+json;version=1",
+            "application/vnd.iate.entry-automatic-merge+json",
+            "application/json",
+            "*/*"
+        ],
+        "accept_media_types": [
+            "application/vnd.iate.entry+json;version=1",
+            "application/vnd.iate.entry+json;version=2",
+            "application/vnd.iate.entry+json",
+            "application/json",
+            "*/*"
+        ]
+    },
+    "suggest": {
+        "href": "https://test.iate2.eu/em-api/ws/entries/_suggest",
+        "method": "POST",
+        "content_media_types": [
+            "application/vnd.iate.entry-suggest-create+json;version=1",
+            "application/vnd.iate.entry-suggest-create+json",
+            "application/json",
+            "*/*"
+        ],
+        "accept_media_types": [
+            "application/vnd.iate.entry-suggest+json;version=1",
+            "application/vnd.iate.entry-suggest+json",
+            "application/json",
+            "*/*"
+        ]
+    },
+    "search_request": {
+        "sources": [
+            "es",
+            "la",
+            "mul"
+        ],
+        "targets": [
+            "la",
+            "mul"
+        ],
+        "query_operator": 3,
+        "query": "anticipación",
+        "search_in_term_types": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "cascade_domains": true,
+        "search_in_fields": [
+            0
+        ]
+    }
+}

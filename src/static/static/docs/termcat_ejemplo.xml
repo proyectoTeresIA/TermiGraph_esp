@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cessiodades
+  ><autor
+    >TeresIA</autor
+  ><titol
+    >Vocabulario de prueba</titol
+  ><fitxes
+    ><fitxa
+        num="1"
+      ><areatematica
+        ><![CDATA[Informática]]></areatematica
+      ><denominacio
+          llengua="es"
+          tipus=""
+          jerarquia=""
+          categoria="n m"
+        ><![CDATA[ordenador]]></denominacio
+      ><denominacio
+          llengua="es"
+          tipus=""
+          jerarquia=""
+          categoria="n m/f"
+        ><![CDATA[computador -a]]></denominacio
+      ><denominacio
+          llengua="en"
+          tipus="remissio"
+          jerarquia=""
+          categoria="n"
+        ><![CDATA[computer]]></denominacio
+      ><denominacio
+          llengua="en"
+          tipus=""
+          jerarquia="sigla"
+          categoria=""
+        ><![CDATA[PC]]></denominacio
+      ><definicio
+          llengua="es"
+        ><![CDATA[Una máquina]]></definicio
+      ><definicio
+          llengua="en"
+        ><![CDATA[A machine]]></definicio
+      ></fitxa
+    ><fitxa
+        num="2"
+      ><areatematica
+        ><![CDATA[Gastronomía]]></areatematica
+      ><areatematica
+        ><![CDATA[Química]]></areatematica
+      ><denominacio
+          llengua="es"
+          tipus=""
+          jerarquia=""
+          categoria="n m"
+        ><![CDATA[agua]]></denominacio
+      ><denominacio
+          llengua="es"
+          tipus=""
+          jerarquia="remissio"
+          categoria="n m pl"
+        ><![CDATA[aguas]]></denominacio
+      ><denominacio
+          llengua="for"
+          tipus=""
+          jerarquia=""
+          categoria=""
+        ><![CDATA[H2O]]></denominacio
+    ></fitxa
+  ></fitxes
+></cessiodades>

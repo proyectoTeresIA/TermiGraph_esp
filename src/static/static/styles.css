@@ -1,0 +1,790 @@
+
+/* === Ajuste para mantener el footer al fondo === */
+html, body {
+  height: 100%;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+/*    background-color: #fffcf6;*/
+}
+
+section {
+  margin: 0px; /* margen uniforme en todos los lados */
+  padding: 0px;
+}
+
+.formulario {
+  background-color: #fffcf6;
+  padding: 30px;
+  border: 5px solid #312783;  /* Color y grosor del borde */
+  border-radius: 10px;         /* Bordes redondeados */
+  width: 560px;               /* Tamaño horizontal */
+  margin: 0 auto;             /* Centrado horizontal */
+  margin-bottom: 50px;
+}
+
+form label {
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+form div {
+    margin-top: 20px;
+}
+
+select {
+    width: 500px;               /* Tamaño horizontal */
+    height: 50px;               /* Altura */
+    padding: 10px;              /* espacio entre el texto y el borde de la caja */
+    font-size: 16px;            /* Tamaño de letra */
+    border: 2px solid #0693e3;  /* Color y grosor del borde */
+    border-radius: 5px;         /* Bordes redondeados */
+    background-color: #f0f8ff;  /* Color de fondo */
+    color: #1a1a2e;             /* Color de letra */
+    appearance: none;           /* Oculta el estilo por defecto */
+    -webkit-appearance: none;   /* Elimina el estilo por defecto (Chrome, Safari) */
+    -moz-appearance: none;      /* Elimina el estilo por defecto (Firefox ) */
+    margin-bottom: 20px;
+}
+
+input {
+    margin-bottom: 30px;
+    padding: 10px; 
+}
+
+.input-text {
+    width: 480px;               /* Tamaño horizontal */
+    height: 30px;               /* Altura */
+    padding: 10px;              /* espacio entre el texto y el borde de la caja */
+    font-size: 16px;            /* Tamaño de letra */
+    border: 2px solid #0693e3;  /* Color y grosor del borde */
+    border-radius: 5px;         /* Bordes redondeados */
+    background-color: #f0f8ff;  /* Color de fondo */
+    color: #1a1a2e;             /* Color de letra */
+    appearance: none;           /* Oculta el estilo por defecto */
+    -webkit-appearance: none;   /* Elimina el estilo por defecto (Chrome, Safari) */
+    -moz-appearance: none;      /* Elimina el estilo por defecto (Firefox ) */
+    margin-bottom: 20px;
+}
+
+.input-file {
+    width: 480px;               /* Tamaño horizontal */
+    height: 40px;               /* Altura */
+    padding: 10px;              /* espacio entre el texto y el borde de la caja */
+    font-size: 16px;            /* Tamaño de letra */
+    border: 2px solid #0693e3;  /* Color y grosor del borde */
+    border-radius: 5px;         /* Bordes redondeados */
+    background-color: #f0f8ff;  /* Color de fondo */
+    color: #1a1a2e;             /* Color de letra */
+    appearance: none;           /* Oculta el estilo por defecto */
+    -webkit-appearance: none;   /* Elimina el estilo por defecto (Chrome, Safari) */
+    -moz-appearance: none;      /* Elimina el estilo por defecto (Firefox ) */
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: flex-end;    /* Alinea a la derecha */
+    gap: 10px;                    /* Espacio entre botones */
+    margin-top: 20px;
+}
+
+.input-submit {
+    width: 150px;               /* Tamaño horizontal */
+    height: 40px;               /* Altura */
+    padding: 10px;              /* espacio entre el texto y el borde de la caja */
+    font-size: 16px;            /* Tamaño de letra */
+    border: 2px solid #0693e3;  /* Color y grosor del borde */
+    border-radius: 5px;         /* Bordes redondeados */
+    background-color: #f0f8ff;  /* Color de fondo */
+    color: #1a1a2e;             /* Color de letra */
+    appearance: none;           /* Oculta el estilo por defecto */
+    -webkit-appearance: none;   /* Elimina el estilo por defecto (Chrome, Safari) */
+    -moz-appearance: none;      /* Elimina el estilo por defecto (Firefox ) */
+}
+
+.input-submit:hover {
+  background-color: #007acc;
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.input-clear {
+    width: 150px;               /* Tamaño horizontal */
+    height: 40px;               /* Altura */
+    padding: 10px;              /* espacio entre el texto y el borde de la caja */
+    font-size: 16px;            /* Tamaño de letra */
+    border: 2px solid #0693e3;  /* Color y grosor del borde */
+    border-radius: 5px;         /* Bordes redondeados */
+    background-color: #f0f8ff;  /* Color de fondo */
+    color: #1a1a2e;             /* Color de letra */
+    appearance: none;           /* Oculta el estilo por defecto */
+    -webkit-appearance: none;   /* Elimina el estilo por defecto (Chrome, Safari) */
+    -moz-appearance: none;      /* Elimina el estilo por defecto (Firefox ) */
+}
+
+.input-clear:hover {
+  background-color: #2fabff;
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.main-header {
+    background-color: #F8F8F8;
+    padding: 20px 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.main-header h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+}
+
+h4 {
+    display: flex;
+    font-family: Arial, sans-serif;
+    justify-content: center;
+    font-size: x-large;
+    margin: 60px auto;
+}
+
+
+/*h2 {
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    background-color: #016EB8;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+}
+*/
+
+h2 {
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #ffffff;
+  /* color: #312783; */
+  background-image: url('../static/img/fondo_titulos.png');
+  background-size: cover;
+  background-position: center;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+}
+
+
+.logo-container img {
+    height: 80px;
+}
+
+.logo-img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.main-nav a {
+    display: block;
+    background-color: #ffffff;
+    color: #1a1a2e;
+    padding: 10px 15px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.main-nav a:hover {
+  color: #007acc;
+}
+
+.sub-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 35px;
+}
+
+.sub-nav a {
+    display: block;
+    background-color: #F8F8F8;
+    color: #1a1a2e;
+    padding: 10px 15px;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 10px;         /* Bordes redondeados */
+}
+
+.sub-nav a:hover {
+  color: #007acc;
+  background-color: #F0F2F6;
+}
+
+
+.image-strip {
+  width: 100vw; /* 100% del ancho de la ventana */
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.image-strip img {
+  width: 100%;
+  height: auto;
+  display: block; /* Elimina espacios en blanco debajo de la imagen */
+}
+
+
+
+.sub-gris {
+    background-color: #F0F0F6;
+    padding: 40px;
+}
+
+.sub-blanco {
+    background-color: #ffffff;
+    padding: 40px;
+}
+
+.main-header {
+  background-color: #f0f0f0;
+  padding: 20px 0;
+}
+
+.header-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1800px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 20px;
+}
+
+.logo-left {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.logo-left img {
+  height: 60px;
+  display: block;
+}
+
+.logo-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.logo-center img {
+  height: 120px;
+}
+
+.download-btn {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  display: inline-block;
+  color: black;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  width: 180px;               /* Tamaño horizontal */
+  height: 20px;               /* Altura */
+  padding: 10px;              /* espacio entre el texto y el borde de la caja */
+  font-size: 16px;            /* Tamaño de letra */
+  border: 2px solid #0693e3;  /* Color y grosor del borde */
+  background-color: #f0f8ff;  /* Color de fondo */
+  appearance: none;           /* Oculta el estilo por defecto */
+  -webkit-appearance: none;   /* Elimina el estilo por defecto (Chrome, Safari) */
+  -moz-appearance: none;      /* Elimina el estilo por defecto (Firefox ) */
+  justify-content: flex-end;    /* Alinea a la derecha */
+  gap: 10px;                    /* Espacio entre botones */
+  margin-top: 20px;
+}
+
+.download-btn:hover {
+  background-color: #057ac4;
+  color: white;
+}
+
+.error-container {
+  text-align: center;
+  padding: 100px 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.back-button {
+  display: inline-block;
+  margin-top: 20px;
+  background-color: #0693e3;
+  color: white;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.back-button:hover {
+  background-color: #057ac4;
+}
+
+
+h3 {
+    padding: 1vw 1vw; /* Unidades relativas al ancho de la pantalla */
+    margin: 7px auto 30px auto;
+    background-color: #312783;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 10px;
+    border: 5px solid #312783;
+    width: 90%; /* Ocupa el 90% del ancho disponible */
+    max-width: 560px; /* No se hace más grande que esto */
+    box-sizing: border-box; /* Incluye el padding y border en el ancho total */
+}
+
+/*Para visualizar la leyenda del símbolo de 'campo opcional'*/
+.opcional-simbolo {
+    cursor: help;
+    font-size: 1.2em;
+    margin-left: 0.5em;
+    color: #007BFF;
+}
+.opcional-leyenda {
+    margin-left: 0.5em;
+}
+
+
+
+/*Para visualizar la leyenda de 'campo obligatorio'*/
+.obligatorio-simbolo {
+    cursor: help;
+    font-size: 1.2em;
+    margin-left: 0.5em;
+    color: #007BFF;
+}
+
+.obligatorio-leyenda {
+    margin-left: 0.5em;
+}
+
+/* button {
+  display: inline-block;
+  background-color: #0693e3;
+  color: white;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+} */
+
+button:hover {
+  background-color: #057ac4;
+}
+
+.separador {
+    border: none;
+    height: 4px;
+    background-color: #312783;
+    width: 80%;                /* Solo ocupa el 60% del ancho */
+    margin: 50px auto;         /* Centrada horizontalmente */
+    border-radius: 2px;        /* Bordes redondeados */
+}
+
+
+.content-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px; /* 🔹 espacio más pequeño entre cajas */
+  padding: 20px;
+}
+
+
+/* Caja de texto */
+.text-box {
+  flex: 1 1 50%; /* ocupa el 45% del ancho pero es flexible */
+  min-width: 280px; /* ancho mínimo para no romperse en móvil */
+  text-align: justify;
+}
+
+/* Caja de imagen */
+.image-box {
+  flex: 1 1 30%;
+  min-width: 280px;
+  text-align: center;
+}
+
+.image-box img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px; /* opcional */
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+  .content-section {
+    flex-direction: column; /* apila texto e imagen */
+    text-align: center;
+  }
+
+  .text-box, .image-box {
+    flex: 1 1 100%; /* cada uno ocupa toda la fila */
+  }
+}
+/* Footer Styling */
+main {
+  flex: 1;
+}
+
+.site-footer {
+  background-color: #222;
+  color: #fff;
+  padding: 1.5rem 2rem;
+}
+
+/* 🔹 Contenedor principal del footer */
+.footer-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between; /* izquierda y derecha */
+  align-items: center;
+  flex-wrap: wrap; /* permite que se apile en pantallas pequeñas */
+  gap: 1.5rem;
+}
+
+/* 🔹 Contenedores izquierdo y derecho */
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+/* Alineaciones específicas */
+.footer-container.left {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.footer-container.right {
+  align-items: flex-end;
+  text-align: right;
+}
+
+/* Logos del footer */
+.footer-logos {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.footer-logo {
+  height: 40px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.footer-logo:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+  z-index: 10; /* ensures it’s above other elements */
+}
+
+/* Texto de derechos y textos pequeños */
+.footer-rights,
+.footer-text {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin: 0;
+}
+
+/* Redes sociales opcionales */
+.footer-socials {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.footer-socials a img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.2s ease;
+}
+
+.footer-socials a:hover img {
+  transform: scale(1.2);
+}
+
+/* Adaptación para pantallas pequeñas */
+@media (max-width: 768px) {
+  .footer-wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-container {
+    align-items: center !important;
+    text-align: center !important;
+  }
+}
+
+/* Cajas para la documentación */
+.contenedor-cajas {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+  gap: 20px; /* Espacio entre cajas */
+  margin-top: 20px;
+}
+
+.caja-docu {
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  outline: 2px solid #312783;
+  border: 30px solid #F0F0F6;      /* Marco rojo de 5px */
+  background-color: #ffffff;
+}
+
+.descripcion {
+  margin: 20px;
+}
+
+/* estilo de la caja de dominios */
+
+.container {
+    margin-left: 0px;
+    border-radius: 5px;         /* Bordes redondeados*/
+    font-size: 16px;            /* Tamaño de letra */   
+    width: 500px;
+    margin-top: 10px;
+}
+
+#searchInput {
+    width: 70%;              /* tamaño del buscador */
+    display: block;          /* para que respete los márgenes automáticos */
+    margin: 0 auto 5px auto;/* centrado horizontal + separación inferior */
+    padding: 8px;
+    border: 2px solid #0693e3;
+    background-color: #fffcf6;
+    border-radius: 5px;
+    text-align: center;      /* texto dentro centrado */
+}
+
+.dropdown {
+    border: 2px solid #0693e3;
+    max-height: 280px;
+    overflow-y: auto;
+    background-color: #f0f8ff;
+    border-radius: 5px;
+    clip-path: inset(0 round 5px); /* fuerza el recorte visual */
+    padding-left: 15px;
+}
+
+.option {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    line-height: 1.1;
+}
+
+
+.option:hover {
+    background-color: #f0f0f0;
+    text-decoration: solid;
+}
+
+.child {
+    padding-left: 20px;
+    font-size: 0.95em;
+}
+
+.selected {
+    padding-left: 5px;
+    background-color: #f0f8ff;
+}
+
+.selected-item {
+    background-color: #e8f4ff;
+    padding: 5px 8px;
+    border: 1px solid #b3d8ff;
+    border-radius: 5px;
+    margin: 3px 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+
+.selected-item:hover {
+    background-color: #d6ecff;
+}
+
+/* Visually hidden but still focusable/validated by browser */
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.financiacion {
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.email-btn {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  display: inline-block;
+  color: black;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  width: 210px;               /* Tamaño horizontal */
+  height: 45px;               /* Altura */
+  padding: 10px;              /* espacio entre el texto y el borde de la caja */
+  font-size: 16px;            /* Tamaño de letra */
+  border: 2px solid #0693e3;  /* Color y grosor del borde */
+  background-color: #f0f8ff;  /* Color de fondo */
+  appearance: none;           /* Oculta el estilo por defecto */
+  -webkit-appearance: none;   /* Elimina el estilo por defecto (Chrome, Safari) */
+  -moz-appearance: none;      /* Elimina el estilo por defecto (Firefox ) */
+  justify-content: flex-end;    /* Alinea a la derecha */
+  gap: 10px;                    /* Espacio entre botones */
+  margin-top: 20px;
+}
+
+.email-btn:hover {
+  background-color: #057ac4;
+  color: white;
+}
+
+.info-icon {
+  position: relative;
+  display: inline-block;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.info-icon .tooltip {
+  visibility: hidden;
+  opacity: 0;
+  width: 180px;
+  background: #333;
+  color: #fff;
+  text-align: left;
+  padding: 8px;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 10;
+  bottom: 125%; /* position above icon */
+  left: 50%;
+  transform: translateX(-50%);
+  transition: opacity 0.25s;
+}
+
+.info-icon:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.download-btnL {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  display: inline-block;
+  color: black;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  width: 220px;               /* Tamaño horizontal */
+  height: 20px;               /* Altura */
+  padding: 10px;              /* espacio entre el texto y el borde de la caja */
+  font-size: 16px;            /* Tamaño de letra */
+  border: 2px solid #0693e3;  /* Color y grosor del borde */
+  background-color: #f0f8ff;  /* Color de fondo */
+  appearance: none;           /* Oculta el estilo por defecto */
+  -webkit-appearance: none;   /* Elimina el estilo por defecto (Chrome, Safari) */
+  -moz-appearance: none;      /* Elimina el estilo por defecto (Firefox ) */
+  justify-content: flex-end;    /* Alinea a la derecha */
+  gap: 10px;                    /* Espacio entre botones */
+  margin-top: 20px;
+}
+
+.download-btnL:hover {
+  background-color: #057ac4;
+  color: white;
+}
+
+.download-btnXL {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  display: inline-block;
+  color: black;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  width: 300px;               /* Tamaño horizontal */
+  height: 20px;               /* Altura */
+  padding: 10px;              /* espacio entre el texto y el borde de la caja */
+  font-size: 16px;            /* Tamaño de letra */
+  border: 2px solid #0693e3;  /* Color y grosor del borde */
+  background-color: #f0f8ff;  /* Color de fondo */
+  appearance: none;           /* Oculta el estilo por defecto */
+  -webkit-appearance: none;   /* Elimina el estilo por defecto (Chrome, Safari) */
+  -moz-appearance: none;      /* Elimina el estilo por defecto (Firefox ) */
+  justify-content: flex-end;    /* Alinea a la derecha */
+  gap: 10px;                    /* Espacio entre botones */
+  margin-top: 20px;
+}
+
+.download-btnXL:hover {
+  background-color: #057ac4;
+  color: white;
+}
